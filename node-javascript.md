@@ -1,12 +1,40 @@
 # Node / Javascript Cheatsheet
 
 Index:
+* [async / await](#async-await)
 * [Array methods (forEach, Map, Filter and Reduce)](#array-methods)
 * [Classes](#classes)
 * [console log with line and file position](#console-log-with-line-and-file-position)
 * [cross-platform (windows/linux/mac) folder paths](#cross-platform-folder-paths)
 * [express "Hello world" starter](#express-hello-world-starter)
+* [JSON.stringify pretty](#json-stringify-pretty)
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
+
+------
+## <a name="async-await"></a> async / await
+In functions declared with "async" before the word "function", or before the "()" you can stop the running of script until the promise. In for loops will stop the loop until the promise resolves. In forEach will continue the loop with the next iteration and only prevent the code below the await of current iteration of the loop.
+```
+let wait3seconds = (n) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Some value');
+    }, 3000);
+  });
+};
+
+(async () => {
+  let b  = await wait3seconds()
+    .catch((err) => {
+      console.log(err)
+    });
+  console.log(b);
+})();
+
+let a = async function() {
+  await something();
+  doSomethingLater();
+}
+```
 
 ------
 ## <a name="array-methods"></a> Array methods (forEach, Map, Filter and Reduce)
@@ -119,6 +147,13 @@ app.listen((process.env.PORT || 3000), function () {
 app.use((req, res) => {
   return res.status(404).render('page404.html', { });
 });
+```
+
+------
+## <a name="json-stringify-pretty"></a>JSON.stringify pretty
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
+```
+JSON.stringify(obj, null, 2);
 ```
 
 ------
