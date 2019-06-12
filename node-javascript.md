@@ -5,6 +5,7 @@ Index:
 * [Classes](#classes)
 * [console log with line and file position](#console-log-with-line-and-file-position)
 * [cross-platform (windows/linux/mac) folder paths](#cross-platform-folder-paths)
+* [express "Hello world" starter](#express-hello-world-starter)
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
 
 ------
@@ -86,6 +87,40 @@ Windows uses backslashes (\) as folder separator in paths. Linux/Mac use slash "
 ```
 console.log(path.normalize(path.join(__dirname, '/code')));
 ```
+------
+
+## <a name="express-hello-world-starter"></a> express "Hello world" starter
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
+```
+const path = require('path');
+const express = require('express');
+const app = express();
+
+// app.engine('html', require('express-es6-template-engine'));
+// app.set('view engine', 'html');
+// app.set('views', 'views');
+// app.use(express.static('public'));
+
+// require('./routes')(app);
+app.get('/', function (req, res) {
+  res.send('Hello World');
+  // res.sendFile(path.resolve(__dirname, './views/index.html')); // without template engine.
+  // res.render('home', { locals: { foo: 'bar' }}); // with template engine.
+});
+
+app.listen((process.env.PORT || 3000), function () {
+  console.log('App listening on port (process.env.PORT || 3000)');
+});
+
+/**
+ * 404 page middleware must be set AFTER all routes, static (public) middleware AND webpack virtual files because only if any of these urls are served it must show 404 page.
+ */
+app.use((req, res) => {
+  return res.status(404).render('page404.html', { });
+});
+```
+
 ------
 ## <a name="list-all-functions-in-a-object"></a>List all methods of a class
 
