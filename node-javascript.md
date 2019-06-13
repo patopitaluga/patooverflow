@@ -1,6 +1,7 @@
 # Node / Javascript Cheatsheet
 
 Index:
+* [Add prefix, suffix or number to list](#add-prefix-suffix-or-number-to-list)
 * [async / await](#async-await)
 * [Array methods (forEach, Map, Filter and Reduce)](#array-methods)
 * [Classes](#classes)
@@ -9,6 +10,21 @@ Index:
 * [express "Hello world" starter](#express-hello-world-starter)
 * [JSON.stringify pretty](#json-stringify-pretty)
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
+
+------
+## <a name="add-prefix-suffix-or-number-to-list"></a> Add prefix, suffix or number to list
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
+```
+let a = `item
+item
+item`
+let prefix = 'z';
+let suffix = 'y';
+let count = true;
+
+console.log(a.split(/\r?\n/).map((e, i) => prefix + e + suffix + ((count) ? i : '')).join('\n'));
+```
 
 ------
 ## <a name="async-await"></a> async / await
