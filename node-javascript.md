@@ -8,8 +8,11 @@ Index:
 * [console log with line and file position](#console-log-with-line-and-file-position)
 * [cross-platform (windows/linux/mac) folder paths](#cross-platform-folder-paths)
 * [express "Hello world" starter](#express-hello-world-starter)
+* [fs.writeFileSync example](#fs-writefilesync-example)
 * [JSON.stringify pretty](#json-stringify-pretty)
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
+* [Replace all occurrences of a string](#replace-all-occurrences-of-a-string)
+* [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 
 ------
 ## <a name="add-prefix-suffix-or-number-to-list"></a> Add prefix, suffix or number to list
@@ -166,6 +169,15 @@ app.use((req, res) => {
 ```
 
 ------
+## <a name="fs-writefilesync-example"></a>fs.writeFileSync example
+Example:
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
+```
+fs.writeFileSync("output.json", JSON.stringify(content, null, 2));
+```
+
+------
 ## <a name="json-stringify-pretty"></a>JSON.stringify pretty
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
@@ -193,3 +205,24 @@ console.log(Object.getOwnPropertyNames(Math).filter(function(p) { return typeof 
 console.log(Object.getOwnPropertyNames(Math).filter((p) => typeof Math[p] === 'function' ));
 ```
 </details>
+
+------
+## <a name="replace-all-occurrences-of-a-string"></a>Replace all occurrences of a string
+
+```
+"foo bar".replace(/foo/g, 'hi');
+```
+
+------
+## <a name="wait-a-couple-of-seconds-and-return-a-promise"></a>Wait a couple of seconds and return a promise
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
+```
+let wait3seconds = (n) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Some value');
+    }, 3000);
+  });
+};
+```
