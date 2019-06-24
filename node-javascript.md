@@ -11,6 +11,7 @@ Index:
 * [fs.writeFileSync example](#fs-writefilesync-example)
 * [JSON.stringify pretty](#json-stringify-pretty)
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
+* [List all properties of an object](#list-all-properties-of-an-object)
 * [Replace all occurrences of a string](#replace-all-occurrences-of-a-string)
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 
@@ -205,6 +206,16 @@ console.log(Object.getOwnPropertyNames(Math).filter(function(p) { return typeof 
 console.log(Object.getOwnPropertyNames(Math).filter((p) => typeof Math[p] === 'function' ));
 ```
 </details>
+
+------
+## <a name="list-all-properties-of-an-object"></a>List all properties of an object
+
+```
+for (var propertyName in myObject) {
+  // propertyName is what you want
+  // you can get the value like this: myObject[propertyName]
+}
+```
 
 ------
 ## <a name="replace-all-occurrences-of-a-string"></a>Replace all occurrences of a string
