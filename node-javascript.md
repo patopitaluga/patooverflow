@@ -165,7 +165,8 @@ app.listen((process.env.PORT || 3000), function () {
  * 404 page middleware must be set AFTER all routes, static (public) middleware AND webpack virtual files because only if any of these urls are served it must show 404 page.
  */
 app.use((req, res) => {
-  return res.status(404).render('page404.html', { });
+  res.status(404).send('Content not found');
+  // return res.status(404).render('page404.html', { });
 });
 ```
 

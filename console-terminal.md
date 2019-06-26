@@ -36,3 +36,4 @@ Windows:
 ```
 git init && echo node_modules>.gitignore && break>index.js && npm init -y
 ```
+You might be needing to start an Express server. In that case: [Patooverflow's Express starter](https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md#express-hello-world-starter)
