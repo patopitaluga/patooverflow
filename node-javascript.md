@@ -1,6 +1,6 @@
 # Node / Javascript Cheatsheet
 
-On github: [https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md](https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md)
+On github: https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md
 
 Also useful:
 * [Console / terminal cheatsheet](https://github.com/patopitaluga/patooverflow/blob/master/console-terminal.md)
@@ -146,7 +146,7 @@ console.log(path.normalize(path.join(__dirname, '/code')));
 
 ## <a name="express-hello-world-starter"></a> express "Hello world" starter
 
-[Copy to clipboard](javascript:var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');)
+<sub><sup><button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button></sup></sub>
 ```
 const path = require('path');
 const express = require('express');
