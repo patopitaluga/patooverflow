@@ -139,7 +139,7 @@ console.log(path.normalize(path.join(__dirname, '/code')));
 
 ## <a name="express-hello-world-starter"></a> express "Hello world" starter
 
-[//]: # (<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>)
+[comment]: # (<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>)
 ```
 const path = require('path');
 const express = require('express');
