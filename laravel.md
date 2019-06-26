@@ -10,13 +10,11 @@ Index:
 ------
 ## <a name="artisan-new-migration"></a> artisan new migration
 
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 php artisan make:migration create_users_table --create=users
 ```
 or
 
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 php artisan make:migration add_votes_to_users_table --table=users
 ```
@@ -24,7 +22,6 @@ php artisan make:migration add_votes_to_users_table --table=users
 ------
 ## <a name="generate-key-for-the-env-file"></a> Generate key for the .env file
 
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 php artisan key:generate
 ```

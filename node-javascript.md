@@ -1,5 +1,10 @@
 # Node / Javascript Cheatsheet
 
+On github: [https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md](https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md)
+
+Also useful:
+* [Console / terminal cheatsheet](https://github.com/patopitaluga/patooverflow/blob/master/console-terminal.md)
+
 Index:
 * [Add prefix, suffix or number to list](#add-prefix-suffix-or-number-to-list)
 * [async / await](#async-await)
@@ -15,10 +20,12 @@ Index:
 * [Replace all occurrences of a string](#replace-all-occurrences-of-a-string)
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 
+Useful tools:
+copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
+
 ------
 ## <a name="add-prefix-suffix-or-number-to-list"></a> Add prefix, suffix or number to list
 
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 let a = `item
 item
@@ -139,7 +146,7 @@ console.log(path.normalize(path.join(__dirname, '/code')));
 
 ## <a name="express-hello-world-starter"></a> express "Hello world" starter
 
-[comment]: # (<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>)
+[Copy to clipboard](javascript:var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');)
 ```
 const path = require('path');
 const express = require('express');
@@ -174,14 +181,12 @@ app.use((req, res) => {
 ## <a name="fs-writefilesync-example"></a>fs.writeFileSync example
 Example:
 
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 fs.writeFileSync("output.json", JSON.stringify(content, null, 2));
 ```
 
 ------
 ## <a name="json-stringify-pretty"></a>JSON.stringify pretty
-<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 JSON.stringify(obj, null, 2);
 ```
@@ -228,7 +233,6 @@ for (var propertyName in myObject) {
 ------
 ## <a name="wait-a-couple-of-seconds-and-return-a-promise"></a>Wait a couple of seconds and return a promise
 
-[comment]: <> <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button>
 ```
 let wait3seconds = (n) => {
   return new Promise((resolve, reject) => {
@@ -238,5 +242,3 @@ let wait3seconds = (n) => {
   });
 };
 ```
-
-<script>alert(1)</script>
