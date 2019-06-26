@@ -146,7 +146,7 @@ console.log(path.normalize(path.join(__dirname, '/code')));
 
 ## <a name="express-hello-world-starter"></a> express "Hello world" starter
 
-<sub><sup><button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');">Copy to clipboard</button></sup></sub>
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 const path = require('path');
 const express = require('express');
@@ -242,3 +242,9 @@ let wait3seconds = (n) => {
   });
 };
 ```
+
+<style>
+  .cpy-btns::before {
+    content: 'Copy to clipboard'
+  }
+</style>
