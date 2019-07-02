@@ -1,5 +1,10 @@
 # Laravel Cheatsheet / Troubleshooting
 
+On github: https://github.com/patopitaluga/patooverflow/blob/master/laravel.md
+
+Also useful:
+* [PHP cheatsheet and useful snippets](https://github.com/patopitaluga/patooverflow/blob/master/php.md)
+
 Index:
 * [artisan new migration](#artisan-new-migration)
 * [Backpack: reorder doesn't work on remote environment](#backpack-reorder-doesnt-work-on-remote-environment)
@@ -49,3 +54,26 @@ Might be because the post form is missing the CSRF Token
 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
 ```
 Or SESSION_SECURE_COOKIE might be set to true when https is not possible (local environment) in config/session.php. You can set it as SESSION_SECURE_COOKIE=false in the .env file in your local environment.
+
+------
+Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
+<style>
+  .markdown-body {
+    position: relative;
+  }
+  .cpy-btns {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    font-family: monospace;
+    font-size: 11px;
+    margin-top: -4px;
+    position: absolute;
+    right: 45px;
+    width: auto;
+  }
+  .cpy-btns::before {
+    content: 'COPY'
+  }
+</style>
