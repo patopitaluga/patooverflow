@@ -169,8 +169,6 @@ const express = require('express');
 const app = express();
 // const bodyParser = require('body-parser');
 
-var app = express()
-
 app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
 
