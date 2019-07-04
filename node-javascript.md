@@ -18,6 +18,7 @@ Index:
 * [List all "methods" (functions) in a class (object)](#list-all-functions-in-a-object)
 * [List all properties of an object](#list-all-properties-of-an-object)
 * [Replace all occurrences of a string](#replace-all-occurrences-of-a-string)
+* [Vanilla minimal server](#vanilla-minimal-server)
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 
 Useful tools:
@@ -250,9 +251,22 @@ for (var propertyName in myObject) {
 
 ------
 ## <a name="replace-all-occurrences-of-a-string"></a>Replace all occurrences of a string
+
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 "foo bar".replace(/foo/g, 'hi');
+```
+
+------
+
+## <a name="vanilla-minimal-server"></a>Vanilla minimal server
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+require('http').createServer((req, res) => {
+  // res.end('123');
+  res.end(require('fs').readFileSync(require('path').resolve(__dirname, './index.html'), 'utf8'));
+}).listen(3000, () => console.log('Listening port 3000'));
 ```
 
 ------
