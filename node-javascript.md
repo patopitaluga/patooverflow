@@ -95,7 +95,7 @@ console.log(greetings);
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 let people = [{ name: 'a' }, { name: 'b' }];
-let greetings = people.filter((eachOne, index, theArray) => { // returns an array with each return as an element in the array.
+let greetings = people.filter((eachOne, index, theArray) => { // returns an array with each item that meets its conditional statement.
   return (eachOne.name.substr(0, 1) === 'm'); // returns boolean
 });
 console.log(greetings);
@@ -106,8 +106,7 @@ console.log(greetings);
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 let people = [{ name: 'a' }, { name: 'b' }];
-let greetings = people.reduce((prevValue, currentValue, index, theArray) => { // returns an array with each return as an element in the array.
-  console.log(index);
+let greetings = people.reduce((prevValue, currentValue, index, theArray) => { // returns a single value of any type created after looping every item in array.
   return 'Hello ' + prevValue.name + ' and ' + currentValue.name;
 });
 console.log(greetings);
@@ -170,8 +169,8 @@ const express = require('express');
 const app = express();
 // const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
-app.use(bodyParser.json()); // parse application/json
+// app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
+// app.use(bodyParser.json()); // parse application/json
 
 // app.engine('html', require('express-es6-template-engine'));
 // app.set('view engine', 'html');
