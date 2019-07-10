@@ -11,6 +11,11 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+    input[type="text"] {
+      border-radius: 3px;
+      border: 1px #666 solid;
+      padding: 2px 6px;
+    }
   </style>
 </head>
 <body>
@@ -22,7 +27,10 @@
       <div v-if="loading">
         Loading content
       </div>
-      <div v-html="searchresult" style="margin: 10px 0;"></div>
+      <div style="margin: 10px 0;" v-if="searchresult != ''">
+        <div>Result:</div>
+        <div v-html="searchresult" style="margin: 10px 0;"></div>
+      </div>
     </div>
   </div>
   <script>
@@ -37,14 +45,16 @@
       },
       methods: {
         search: function() {
-          let that = this;
-          let found = false;
-          content.forEach(function(eachLine) {
-            if (!found && eachLine.line.indexOf(that.searching) > -1) {
-              found = true;
-              that.searchresult = '<a href="' + eachLine.url + eachLine.line.substr(eachLine.line.indexOf('#')).replace(')', '') + '"> ' + eachLine.line.substr(3, eachLine.line.indexOf('#') - 5) + '</a>';
-            }
-          });
+          if (this.searching != '') {
+            let that = this;
+            let found = false;
+            content.forEach(function(eachLine) {
+              if (!found && eachLine.line.substr(0, 3) === '* [' && eachLine.line.indexOf(that.searching) > -1) {
+                found = true;
+                that.searchresult = '<a href="' + eachLine.url + eachLine.line.substr(eachLine.line.indexOf('#')).replace(')', '') + '"> ' + eachLine.line.substr(3, eachLine.line.indexOf('#') - 5) + '</a>';
+              }
+            });
+          }
         }
       },
       mounted: function () {
