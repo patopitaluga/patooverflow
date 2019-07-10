@@ -1,0 +1,95 @@
+<html>
+<head>
+  <title>Pato Overflow - Personal cheatsheet and documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div style="max-width: 1024px;margin: 0 auto;">
+      <h1>Pato Overflow - Personal cheatsheet and documentation</h1>
+      <hr/>
+      Search: <input type="text" @keyup="search" v-model="searching" id="searchInput"/>
+      <div v-if="loading">
+        Loading content
+      </div>
+      <div v-html="searchresult" style="margin: 10px 0;"></div>
+    </div>
+  </div>
+  <script>
+    let content = [];
+
+    new Vue({
+      el: '#app',
+      data: {
+        searching: '',
+        searchresult: '',
+        loading: true
+      },
+      methods: {
+        search: function() {
+          let that = this;
+          let found = false;
+          content.forEach(function(eachLine) {
+            if (!found && eachLine.line.indexOf(that.searching) > -1) {
+              found = true;
+              that.searchresult = '<a href="' + eachLine.url + eachLine.line.substr(eachLine.line.indexOf('#')).replace(')', '') + '"> ' + eachLine.line.substr(3, eachLine.line.indexOf('#') - 5) + '</a>';
+            }
+          });
+        }
+      },
+      mounted: function () {
+        this.$nextTick(function () {
+          document.getElementById('searchInput').focus();
+          var that = this;
+          var docsList = [
+            {
+              url: 'https://github.com/patopitaluga/patooverflow/blob/master/console-terminal.md',
+              file: 'https://raw.githubusercontent.com/patopitaluga/patooverflow/master/console-terminal.md'
+            },
+            {
+              url: 'https://github.com/patopitaluga/patooverflow/blob/master/git.md',
+              file: 'https://raw.githubusercontent.com/patopitaluga/patooverflow/master/git.md'
+            },
+            {
+              url: 'https://github.com/patopitaluga/patooverflow/blob/master/laravel.md',
+              file: 'https://raw.githubusercontent.com/patopitaluga/patooverflow/master/laravel.md'
+            },
+            {
+              url: 'https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md',
+              file: 'https://raw.githubusercontent.com/patopitaluga/patooverflow/master/node-javascript.md'
+            },
+            {
+              url: 'https://github.com/patopitaluga/patooverflow/blob/master/php.md',
+              file: 'https://raw.githubusercontent.com/patopitaluga/patooverflow/master/php.md'
+            }
+          ];
+          var docsGot = 0;
+          function getOneDoc() {
+            axios.get(docsList[docsGot].file)
+              .then(function(result) {
+                that.loading = false;
+                var lines = result.data.split('\n');
+                for (var i = 0; i < lines.length; i++) {
+                  content.push({ url: docsList[docsGot].url, line: lines[i] });
+                }
+                docsGot++;
+                if (docsGot < docsList.length) getOneDoc();
+              });
+          }
+          getOneDoc();
+        })
+      }
+    })
+  </script>
+</body>
+</html>
