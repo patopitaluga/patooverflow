@@ -66,7 +66,7 @@ Windows:
 ```
 git init && echo node_modules>.gitignore && break>index.js && npm init -y
 ```
-You might be needing to start an Express server. In that case: [Patooverflow's Express starter](https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md#express-hello-world-starter)
+You might need to start an Express server. In that case: [Patooverflow's Express starter](https://github.com/patopitaluga/patooverflow/blob/master/node-javascript.md#express-hello-world-starter)
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
