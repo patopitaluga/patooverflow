@@ -36,6 +36,11 @@ rm -rf dir-name
 Windows:
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
+rmdir /S nonemptydir
+```
+or without prompt
+```
+rmdir /Q /S nonemptydir
 ```
 
 ------
