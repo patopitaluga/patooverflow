@@ -1,8 +1,9 @@
 # GIT Cheatsheet
 
 Index:
-* [Clear all your changes and start clean in sync with the last commit](#git-clean)
 * [List remotes of repository](#list-remotes-of-repository)
+* [List remotes of repository](#list-remotes-of-repository)
+* ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
 
 ------
 
@@ -22,6 +23,19 @@ git stash will keep the stash and will not remove untracked (new) files.
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 git remote -v
+```
+
+------
+
+## <a name="git-squash"></a> "Squash" multiple commits in a single commit to merge to parent branch
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+
+Chose a name for the new branch (usually your current branch + a sufix).
+```
+git checkout -b current-branch-name-with-sufix
+git checkout target-branch-name
+git merge --no-ff target-branch-name-with-sufix
+git push origin target-branch-name
 ```
 
 
