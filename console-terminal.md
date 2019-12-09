@@ -8,6 +8,7 @@ Also useful:
 Index:
 * [Create a new empty file from terminal](#create-a-new-empty-file)
 * [Delete non empty folders](#delete-non-empty-folders)
+* [List files one below the other](#list-files-one-below-the-other)
 * [Open bash inside container](#open-bash-inside-container)
 * [Open url](#open-url)
 * [path linux style in windows](#path-linux-style-in-windows)
@@ -27,7 +28,7 @@ break > new-emty-file.txt
 ```
 
 ------
-## <a name="delete-non-empty-folders"></a> Delete non empty folders
+## <a name="list-files-one-below-the-other"></a> List files one below the other
 Linux:
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
@@ -41,6 +42,30 @@ rmdir /S nonemptydir
 or without prompt
 ```
 rmdir /Q /S nonemptydir
+```
+
+------
+## <a name="delete-non-empty-folders"></a> Delete non empty folders
+Linux:
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+ls -1a
+```
+Windows:
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+dir /b /a-d
+```
+
+To export the list to a file:
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+ls -1a>list.txt
+```
+or
+```
+dir /b /a-d>list.txt
 ```
 
 ------
