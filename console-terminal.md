@@ -28,7 +28,7 @@ break > new-emty-file.txt
 ```
 
 ------
-## <a name="list-files-one-below-the-other"></a> List files one below the other
+## <a name="delete-non-empty-folders"></a> Delete non empty folders
 Linux:
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
@@ -45,7 +45,7 @@ rmdir /Q /S nonemptydir
 ```
 
 ------
-## <a name="delete-non-empty-folders"></a> Delete non empty folders
+## <a name="list-files-one-below-the-other"></a> List files one below the other
 Linux:
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
