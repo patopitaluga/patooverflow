@@ -8,13 +8,13 @@ Also useful:
 * [PHP cheatsheet](https://github.com/patopitaluga/patooverflow/blob/master/php.md)
 
 Index:
-* [Sanitize POST variables to avoid SQL injection](#cannot-truncate-a-table-referenced-in-a-foreign-key-constraint)
+* [Fix cannot truncate a table referenced in a foreign key constraint](#cannot-truncate-a-table-referenced-in-a-foreign-key-constraint)
 
 Useful tools:
 copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
 
 ------
-## <a name="cannot-truncate-a-table-referenced-in-a-foreign-key-constraint"></a> Cannot truncate a table referenced in a foreign key constraint
+## <a name="cannot-truncate-a-table-referenced-in-a-foreign-key-constraint"></a> Fix cannot truncate a table referenced in a foreign key constraint
 
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 
