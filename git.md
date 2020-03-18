@@ -1,7 +1,7 @@
 # GIT Cheatsheet
 
 Index:
-* [List remotes of repository](#list-remotes-of-repository)
+* [Clear all your changes and start clean in sync with the last commit](#git-clean)
 * [List remotes of repository](#list-remotes-of-repository)
 * ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
 
