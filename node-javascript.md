@@ -105,10 +105,11 @@ console.log(greetings);
 
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
-let people = [{ name: 'a' }, { name: 'b' }];
-let greetings = people.reduce((prevValue, currentValue, index, theArray) => { // returns a single value of any type created after looping every item in array.
-  return 'Hello ' + prevValue.name + ' and ' + currentValue.name;
-});
+let people = [{ name: 'Ann' }, { name: 'Bob' }];
+let initialValue = 'There\'s ' + people.length + ' people in the list: ';
+let greetings = people.reduce((accumulator, currentValue, index, theArray) => { // returns a single value of any type created after looping every item in array.
+  return accumulator + ((index > 0) ? ' and ' : '') + currentValue.name;
+}, initialValue);
 console.log(greetings);
 ```
 
