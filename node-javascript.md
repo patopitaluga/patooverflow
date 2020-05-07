@@ -6,6 +6,7 @@ Also useful:
 * [Console / terminal cheatsheet](https://github.com/patopitaluga/patooverflow/blob/master/console-terminal.md)
 
 Index:
+* [Redirect](#redirect)
 * [Add prefix, suffix or number to list](#add-prefix-suffix-or-number-to-list)
 * [async / await](#async-await)
 * [Array methods (forEach, Map, Filter and Reduce)](#array-methods)
@@ -20,9 +21,20 @@ Index:
 * [Replace all occurrences of a string](#replace-all-occurrences-of-a-string)
 * [Vanilla minimal server](#vanilla-minimal-server)
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
+* [Truthy and Falsey: how to check if a variable "exists"](#truthy-and-falsey-how-to-check-if-a-variable-exists)
 
 Useful tools:
 copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
+
+------
+## <a name="Redirect"></a> Redirect
+```
+// As a mouse clicking on a link:
+window.location.href = '/someurl';
+
+// As an HTTP redirect:
+window.location.replace('/someurl');
+```
 
 ------
 ## <a name="add-prefix-suffix-or-number-to-list"></a> Add prefix, suffix or number to list
@@ -280,6 +292,22 @@ let wait3seconds = (n) => {
     }, 3000);
   });
 };
+```
+------
+
+## <a name="truthy-and-falsey-how-to-check-if-a-variable-exists"></a>Truthy and Falsey: how to check if a variable "exists"
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+Boolean(undefined); // => false
+Boolean(null); // => false
+Boolean(false); // => false
+Boolean(0); // => false
+Boolean(""); // => false
+Boolean(NaN); // => false
+
+Boolean(1); // => true
+Boolean([1,2,3]); // => true
+Boolean(function(){}); // => true
 ```
 
 ------
