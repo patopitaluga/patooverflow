@@ -3,6 +3,7 @@
 Index:
 * [Clear all your changes and start clean in sync with the last commit](#git-clean)
 * [Delete local branch](#delete-local-branch)
+* [Discard all changes in a single file](#discard-all-changesin-a-single-file)
 * [List remotes of repository](#list-remotes-of-repository)
 * ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
 
@@ -25,6 +26,15 @@ git stash will keep the stash and will not remove untracked (new) files.
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
 git branch -D branchname
+```
+
+------
+
+## <a name="discard-all-changesin-a-single-file"></a> Discard all changes in a single file
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+git checkout {path-to-local-file}
 ```
 
 ------
