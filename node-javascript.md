@@ -277,6 +277,7 @@ for (var propertyName in myObject) {
 ```
 require('http').createServer((req, res) => {
   // res.end('123');
+  // res.writeHead(200, { 'Content-Type': 'image/jpg' }); // for example to serve a public file
   res.end(require('fs').readFileSync(require('path').resolve(__dirname, './index.html'), 'utf8'));
 }).listen(3000, () => console.log('Listening port 3000'));
 ```
