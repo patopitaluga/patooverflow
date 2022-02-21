@@ -311,6 +311,8 @@ Boolean([1,2,3]); // => true
 Boolean(function(){}); // => true
 ```
 
+.
+
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
 <style>
