@@ -3,6 +3,7 @@
 Index:
 * [Run postgres cli from terminal](#run-postgres-cli-from-terminal)
 * [Quit postgres cli](#quit-postgres-cli)
+* [List tables](#list-tables)
 
 ------
 
@@ -19,6 +20,24 @@ psql
 
 ```
 \q
+```
+
+------
+
+## <a name="list-tables"></a> List tables
+
+```
+\dt
+```
+
+------
+
+## <a name="list-tables"></a> Output to txt file
+
+```
+\o /Users/patopitaluga/output.txt
+select * from users;
+\o
 ```
 
 ------

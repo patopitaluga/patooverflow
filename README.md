@@ -13,3 +13,5 @@ Personal cheatsheets and documentation of common snippets.
 [Laravel](https://github.com/patopitaluga/patooverflow/blob/master/laravel.md)
 
 [MySQL](https://github.com/patopitaluga/patooverflow/blob/master/mysql.md)
+
+[Postgres](https://github.com/patopitaluga/patooverflow/blob/master/postgres.md)
