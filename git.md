@@ -6,6 +6,7 @@ Index:
 * [Discard all changes in a single file](#discard-all-changesin-a-single-file)
 * [List remotes of repository](#list-remotes-of-repository)
 * ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
+* [Change last commit message](#commit-amend)
 
 ------
 
@@ -57,6 +58,12 @@ git checkout target-branch-name
 git merge --no-ff target-branch-name-with-sufix
 git push origin target-branch-name
 ```
+
+## <a name="commit-amend"></a> Change last commit message
+```
+git commit --amend -m "an updated commit message"
+```
+
 
 
 
