@@ -1,6 +1,7 @@
 # Docker Cheatsheet
 
 Index:
+* [Copy files to docker container](#copy-files-to-docker-container)
 * [List Docker Containers](#list-docker-containers)
 * [Stop Docker Container](#stop-docker-container)
 * [Enter a Docker Container run commands](#enter-a-docker-container)
@@ -27,7 +28,15 @@ docker stop my_container
 ## <a name="enter-a-docker-container"></a> Enter a Docker Container run commands
 
 ```
-docker exec -it container-name
+docker exec -it container-name /bin/bash
+```
+
+------
+
+## <a name="copy-files-to-docker-container"></a> Copy files to docker container
+
+```
+docker cp foo.txt container_id:/foo.txt
 ```
 
 ------
