@@ -7,6 +7,7 @@ Index:
 * [List remotes of repository](#list-remotes-of-repository)
 * ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
 * [Change last commit message](#commit-amend)
+* [Add remote with credentials](#add-remote-with-credentials)
 
 ------
 
@@ -64,8 +65,15 @@ git push origin target-branch-name
 git commit --amend -m "an updated commit message"
 ```
 
+------
 
+## <a name="add-remote-with-credentials"></a> Add remote with credentials
 
+Sometimes when the repo and we are using different users to push to different repos is useful to set the remote origina as a url with credentials.
+
+```
+git remote set-url origin https://your-user:your-password@github.com/your-organization/your-repo.git
+```
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
