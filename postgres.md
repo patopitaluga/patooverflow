@@ -4,6 +4,7 @@ Index:
 * [Run postgres cli from terminal](#run-postgres-cli-from-terminal)
 * [Quit postgres cli](#quit-postgres-cli)
 * [List tables](#list-tables)
+* [Drop database from terminal](#drop-db-from-terminal)
 
 ------
 
@@ -38,6 +39,14 @@ psql
 \o /Users/patopitaluga/output.txt
 select * from users;
 \o
+```
+
+------
+
+## <a name="drop-db-from-terminal"></a> [Drop database from terminal]
+
+```
+dropdb 'database name'
 ```
 
 ------
