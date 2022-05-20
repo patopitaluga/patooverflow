@@ -8,6 +8,7 @@ Index:
 * ["Squash" multiple commits in a single commit to merge to parent branch](#git-squash)
 * [Change last commit message](#commit-amend)
 * [Add remote with credentials](#add-remote-with-credentials)
+* [Setup upstream branch with the same name by default] (#setup-upstream-branch-with-the-same-name) 
 
 ------
 
