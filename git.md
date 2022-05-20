@@ -76,6 +76,16 @@ git remote set-url origin https://your-user:your-password@github.com/your-organi
 ```
 
 ------
+
+## <a name="setup-upstream-branch-with-the-same-name"></a> Setup upstream branch with the same name by default
+
+To fix fatal: The current branch <MiBranch> has no upstream branch..
+
+```
+git config --global push.default current
+```
+
+------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
 <style>
   .markdown-body {
