@@ -192,13 +192,13 @@ const app = express();
 // app.use(express.static('public'));
 
 // require('./routes')(app);
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('Hello World');
   // res.sendFile(path.resolve(__dirname, './views/index.html')); // without template engine.
   // res.render('home', { locals: { foo: 'bar' }}); // with template engine.
 });
 
-app.listen((process.env.PORT || 3000), function () {
+app.listen((process.env.PORT || 3000), () => {
   console.log('App listening on port ' + (process.env.PORT || 3000));
 });
 
