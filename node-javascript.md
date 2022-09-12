@@ -22,6 +22,7 @@ Index:
 * [Vanilla minimal server](#vanilla-minimal-server)
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 * [Truthy and Falsey: how to check if a variable "exists"](#truthy-and-falsey-how-to-check-if-a-variable-exists)
+* [Dotenv library to load environment variables from .env file](#dot-env-lib)
 
 Useful tools:
 copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
@@ -311,7 +312,21 @@ Boolean([1,2,3]); // => true
 Boolean(function(){}); // => true
 ```
 
-.
+------
+
+## <a name="dot-env-lib"></a>Dotenv library to load environment variables from .env file
+
+Using require:
+```
+require('dotenv').config();
+```
+
+ES6 import:
+```
+require('dotenv').config();
+```
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
