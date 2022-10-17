@@ -17,3 +17,5 @@ Personal cheatsheets and documentation of common snippets.
 [PHP](https://github.com/patopitaluga/patooverflow/blob/master/php.md)
 
 [Postgres](https://github.com/patopitaluga/patooverflow/blob/master/postgres.md)
+
+[Nginx](https://github.com/patopitaluga/patooverflow/blob/master/nginx.md)
