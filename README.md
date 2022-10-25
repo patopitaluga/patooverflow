@@ -19,3 +19,5 @@ Personal cheatsheets and documentation of common snippets.
 [Postgres](https://github.com/patopitaluga/patooverflow/blob/master/postgres.md)
 
 [Nginx](https://github.com/patopitaluga/patooverflow/blob/master/nginx.md)
+
+[Visual Studio Code](https://github.com/patopitaluga/patooverflow/blob/master/visual-studio-code.md)
