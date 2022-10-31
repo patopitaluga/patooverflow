@@ -23,6 +23,7 @@ Index:
 * [Wait a couple of seconds and return a promise](#wait-a-couple-of-seconds-and-return-a-promise)
 * [Truthy and Falsey: how to check if a variable "exists"](#truthy-and-falsey-how-to-check-if-a-variable-exists)
 * [Dotenv library to load environment variables from .env file](#dot-env-lib)
+* [Npm list registry](#npm-list-registry)
 
 Useful tools:
 copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
@@ -327,6 +328,14 @@ require('dotenv').config();
 ```
 import * as dotenv from 'dotenv';
 dotenv.config();
+
+------
+
+## <a name="npm-list-registry"></a>Npm list registry
+
+```
+npm config get registry
+```
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
