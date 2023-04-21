@@ -37,6 +37,14 @@ docker exec -it 936ceef059df psql -U username password
 
 ------
 
+## <a name="list-databases"></a> List databases
+
+```
+\l
+```
+
+------
+
 ## <a name="list-tables"></a> List tables
 
 ```
