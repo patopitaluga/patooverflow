@@ -2,6 +2,7 @@
 
 Index:
 * [Run postgres cli from terminal](#run-postgres-cli-from-terminal)
+* [Run postgres cli from terminal inside docker](#run-postgres-cli-from-terminal-inside-docker)
 * [Quit postgres cli](#quit-postgres-cli)
 * [List tables](#list-tables)
 * [Drop database from terminal](#drop-db-from-terminal)
@@ -14,6 +15,16 @@ Index:
 ```
 psql
 ```
+
+------
+
+## <a name="run-postgres-cli-from-terminal-inside-docker"></a> Run postgres cli from terminal inside docker
+
+<button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
+```
+docker exec -it 936ceef059df psql -U username password
+```
+
 
 ------
 
