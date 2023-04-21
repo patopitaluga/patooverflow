@@ -4,6 +4,7 @@ Index:
 * [Run postgres cli from terminal](#run-postgres-cli-from-terminal)
 * [Run postgres cli from terminal inside docker](#run-postgres-cli-from-terminal-inside-docker)
 * [Quit postgres cli](#quit-postgres-cli)
+* [List databases](#list-databases)
 * [List tables](#list-tables)
 * [Drop database from terminal](#drop-db-from-terminal)
 
