@@ -43,7 +43,7 @@ select * from users;
 
 ------
 
-## <a name="drop-db-from-terminal"></a> [Drop database from terminal]
+## <a name="drop-db-from-terminal"></a> Drop database from terminal
 
 ```
 dropdb 'database name'
