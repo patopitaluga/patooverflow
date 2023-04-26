@@ -49,13 +49,12 @@ rmdir /Q /S nonemptydir
 ## <a name="find-matching-filenames-in-a-folder"></a> Find matching filenames in a folder
 
 ```
-grep -Ril "text-to-find-here" /
+grep -Ril "text-to-find-here" .
 ```
-i stands for ignore case (optional in your case).
-R stands for recursive.
-l stands for "show the file name, not the result itself".
-/ stands for starting at the root of your machine.
-
+- i stands for ignore case (optional in your case).
+- R stands for recursive.
+- l stands for "show the file name, not the result itself".
+- . stands for the path of current folder
 ------
 ## <a name="list-files-one-below-the-other"></a> List files one below the other
 Linux:
