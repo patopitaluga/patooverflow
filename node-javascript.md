@@ -24,6 +24,7 @@ Index:
 * [Truthy and Falsey: how to check if a variable "exists"](#truthy-and-falsey-how-to-check-if-a-variable-exists)
 * [Dotenv library to load environment variables from .env file](#dot-env-lib)
 * [Npm list registry](#npm-list-registry)
+* [Path for "type": "module"](#path-for-type-module)
 
 Useful tools:
 copy code Chrome extension: https://chrome.google.com/webstore/detail/copy-code/ophfcfplhjmiakmfeemkpaoofhjlmkof
@@ -335,6 +336,16 @@ dotenv.config();
 
 ```
 npm config get registry
+```
+
+------
+
+## <a name="path-for-type-module"></a>Path for "type": "module"
+
+```
+import * as path from 'path';
+import * as url from 'url';
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 ```
 
 ------
