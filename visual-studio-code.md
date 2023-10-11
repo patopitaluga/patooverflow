@@ -5,6 +5,7 @@ On github: https://github.com/patopitaluga/patooverflow/blob/master/visual-studi
 Index:
 * [Configuration File](#configuration-file)
 * [Useful configurations](#useful-configurations)
+* [Disable suggestion on "space"](disable-suggestion)
 * [List installed plugins](#list-installed-plugins)
 * [Useful plugins](#useful-plugins)
 * [User snippets](#user-snippets)
@@ -26,6 +27,14 @@ workbench.sideBar.location
 
 ```
 editor.minimap.enabled
+```
+
+------
+
+## <a name="disable-suggestion"></a> Disable suggestion on "space"
+
+```
+"editor.acceptSuggestionOnCommitCharacter": false
 ```
 
 ------
