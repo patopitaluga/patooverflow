@@ -3,10 +3,17 @@
 On github: https://github.com/patopitaluga/patooverflow/blob/master/visual-studio-code.md
 
 Index:
+* [Configuration File](#configuration-file)
 * [Useful configurations](#useful-configurations)
 * [List installed plugins](#list-installed-plugins)
 * [Useful plugins](#useful-plugins)
 * [User snippets](#user-snippets)
+
+------
+
+## <a name="configuration-file"></a> Configuration File:
+
+Press ctrl + shift + p and write settings.json will display among other options "Preferences: Open User Settings (JSON)
 
 ------
 
