@@ -9,6 +9,7 @@ Index:
 * [Change last commit message](#commit-amend)
 * [Add remote with credentials](#add-remote-with-credentials)
 * [Setup upstream branch with the same name by default](#setup-upstream-branch-with-the-same-name)
+* [Check current git user in terminal](#check-current-git-user-in-terminal)
 
 ------
 
@@ -84,6 +85,14 @@ To fix fatal: The current branch <MiBranch> has no upstream branch..
 
 ```
 git config --global push.default current
+```
+
+------
+
+## <a name="check-current-git-user-in-terminal"></a> Check current git user in terminal
+
+```
+git config --global --list --show-origin
 ```
 
 ------
