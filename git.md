@@ -92,7 +92,7 @@ git config --global push.default current
 ## <a name="check-current-git-user-in-terminal"></a> Check current git user in terminal
 
 ```
-git config --global --list --show-origin --no-pager
+git --no-pager config --global --list --show-origin
 ```
 
 ------
