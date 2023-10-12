@@ -10,6 +10,7 @@ Index:
 * [Add remote with credentials](#add-remote-with-credentials)
 * [Setup upstream branch with the same name by default](#setup-upstream-branch-with-the-same-name)
 * [Check current git user in terminal](#check-current-git-user-in-terminal)
+* [Add a pre-commit hook](#add-a-pre-commit-hook)
 
 ------
 
@@ -93,6 +94,30 @@ git config --global push.default current
 
 ```
 git --no-pager config --global --list --show-origin
+```
+
+------
+
+## <a name="add-a-pre-commit-hook"></a> Add a pre-commit hook
+
+Create a pre-commit file
+```
+touch .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+Example of content:
+```
+#!/bin/sh
+
+echo "Pre commit hook"
+if [ ...condition ]; then
+  exit 0
+else
+  echo "Commit rejected. Pre-commit hook not fullfilled"
+  exit 1
+fi
+exit 1
 ```
 
 ------
