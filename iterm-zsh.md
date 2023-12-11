@@ -6,10 +6,13 @@ Also useful:
 * [Node / javascript cheatsheet](https://github.com/patopitaluga/patooverflow/blob/master/console-terminal.md)
 
 Index:
-* [A](#a)
+* [Edit .zshrc](#edit-zshrc)
 
 ------
-## <a name="a"></a> A
+## <a name="edit-zshrc"></a> Edit .zshrc
+`code ~/.zshrc`
+
+PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
