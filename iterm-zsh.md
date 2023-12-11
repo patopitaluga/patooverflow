@@ -7,12 +7,18 @@ Also useful:
 
 Index:
 * [Edit .zshrc](#edit-zshrc)
+* [Display full path](#display-full-path)
 
 ------
 ## <a name="edit-zshrc"></a> Edit .zshrc
 `code ~/.zshrc`
 
-PROMPT='${ret_status} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)'
+------
+## <a name="display-full-path"></a> Display full path
+In ~/.zshrc
+```
+PS1='%d %# '
+```
 
 ------
 Ignore the rest code. Is styling for local display of this file using https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk
