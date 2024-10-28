@@ -180,13 +180,14 @@ console.log(path.normalize(path.join(__dirname, '/code')));
 
 <button onclick="var t=document.createElement('textarea');t.style.width='0';t.style.height='0';t.style.border='0';t.value=this.parentElement.nextElementSibling.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');" class="cpy-btns"></button>
 ```
-const path = require('path');
-const express = require('express');
+import express from 'express';
+import path from 'path';
+
 const app = express();
 // const bodyParser = require('body-parser');
 
-// app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
-// app.use(bodyParser.json()); // parse application/json
+app.use(express.urlencoded());
+app.use(express.json());
 
 // app.engine('html', require('express-es6-template-engine'));
 // app.set('view engine', 'html');
